@@ -1,0 +1,54 @@
+.team-section {
+    padding: 40px 0px;
+    width: 100%;
+    .icon {
+        margin-top: 20px;
+        position: relative;
+        img {
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+            justify-content: center;
+        }
+    }
+    .title-wrapper {
+        .title {
+            font-size: 16pt;
+            margin-bottom: 0 auto;
+            text-align: center;
+            color: #928B8B;
+        }
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        color: #000;
+    }
+    .slick-team {
+        width: 180px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 180px;
+        }
+        .name {
+            font-size: 14pt;
+            text-align: center;
+            color: #38224d;
+            margin: 0 auto;
+        }
+        .description {
+            font-size: 10pt;
+            text-align: center;
+            color: #777575;
+            margin: 0 auto;
+        }
+    }
+    .equipe-row img {
+        max-width: 100%;
+        margin: 10px 0px;
+    }
+}

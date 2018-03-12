@@ -1,0 +1,27 @@
+#contrast {
+    &.c,
+    .c {
+        filter: grayscale(100%) saturate(0%);
+        background-color: #000 !important;
+        color: #fff !important;
+        img {
+            filter: grayscale(100%);
+        }
+        img:hover {
+            filter: grayscale(100%);
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    &.c-b,
+    .c-b {
+        color: #000 !important;
+        background-color: #FFF  !important;
+    }
+    &.c-w,
+    .c-w {
+        color: #FFF !important;
+        background-color: #000  !important;
+    }
+}

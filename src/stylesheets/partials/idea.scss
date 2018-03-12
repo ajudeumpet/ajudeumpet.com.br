@@ -1,0 +1,119 @@
+.steps-section {
+    padding: 60px 0px;
+    background-color: #EBEBEB;
+    justify-content: center;
+    width: 100%;
+    .title-wrapper {
+        .title {
+            font-size: 20pt;
+            margin-bottom: 0 auto;
+            text-align: center;
+            color: #777575;
+        }
+    }
+    .steps-wrapper {
+        margin-top: 40px;
+        .step {
+            position: relative;
+            margin: 0 auto;
+            display: block;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px 0;
+            transition: all .25s ease;
+            &:hover {
+                img {
+                    opacity: 0;
+                }
+                .step-content {
+                    opacity: 1;
+                }
+            }
+            img {
+                width: 146px;
+                height: 129px;
+                display: block;
+                margin: 0 auto;
+                opacity: 1;
+                transition: all .25s ease;
+            }
+            .step-title {
+                display: block;
+                font-size: 12pt;
+                color: $purple;
+            }
+            .step-content {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+                padding: 10px;
+                margin: 0;
+                opacity: 0;
+                transition: all .25s ease;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-iphone) and (max-width:$screen-md - 1) {
+    .steps-section {
+        background-color: #fff;
+        padding: 0px 0px 40px 0px;
+        .title-wrapper {
+            .title {
+                font-size: 15.5pt;
+            }
+        }
+        .steps-wrapper-mobile {
+            margin: 0px -15px;
+            margin-top: 40px;
+            .step {
+                position: relative;
+                display: block;
+                background-color: #fff;
+                border-radius: 10px;
+                width: auto;
+                padding: 0px;
+                margin: 10px 0px;
+                text-align: center;
+                img {
+                    margin-bottom: 10px;
+                    width: 200px;
+                    display: block;
+                    margin: 0 auto;
+                }
+                h5 {
+                    text-align: center;
+                    padding: 5px;
+                }
+                p {
+                    color: #777575;
+                }
+                .step-title {
+                    display: block;
+                    font-size: 12pt;
+                    color: $purple;
+                }
+                .step-content {
+                    display: none;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 10px;
+                    transition: all .25s ease;
+                    margin: 0;
+                }
+                .step-p {
+                    width: 80%;
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

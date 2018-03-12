@@ -1,0 +1,50 @@
+
+.instruction-section {
+    width: 100%;
+    position: relative;
+    .gray-overlay {
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        top: 50%;
+        background-color: $light-gray;
+        z-index: -1;
+    }
+    .instruction-wrapper {
+        .title-wrapper {
+            .title {
+                font-size: 16pt;
+                text-align: center;
+                color: #928B8B;
+            }
+            .number {
+                font-size: 24pt;
+                text-align: center;
+            }
+        }
+        .images-wrapper {
+            margin-top: 20px;
+            width: 100%;
+            .image {
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .description-wrapper {
+            .description {
+                font-size: 18px;
+                text-align: center;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-iphone) and (max-width:$screen-sm - 1) {
+    .instruction-section {
+        .instruction-wrapper {
+            padding: 25px 0px;
+        }
+    }
+}

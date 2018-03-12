@@ -1,0 +1,118 @@
+.slick-slider {
+    padding: 0 !important;
+    position: relative;
+    width: 100%;
+    .slick-wrapper {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 50px;
+        .btn-purple {
+            margin: 20px auto 0;
+            display: block;
+            a:hover {
+                text-decoration: none;
+            }
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+        }
+        .image {
+            height: 150px;
+            margin-top: -30px;
+            align-items: center;
+        }
+        .slick-explanation {
+            text-align: center;
+            display: block;
+            margin: 0px auto;
+            margin-top: 20px;
+            align-items: center;
+            font-weight: 600;
+        }
+        .content-wrapper {
+            z-index: 10;
+            width: 300px;
+            margin-right: 200px;
+        }
+        &.banner1 {
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        &.banner2 {
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+        }
+        &.banner3 {
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            a {
+                outline: none;
+                &:hover {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+    @media (min-width:$screen-iphone) and (max-width: $screen-sm+1) {
+        .slick-wrapper {
+            .overlay-purple {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(55, 34, 78, 0.38);
+            }
+            .content-wrapper {
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+                padding: 0px 10px;
+                h2 {
+                    font-size: 1.8rem;
+                }
+            }
+            &.banner1 {
+                background-position-x: 15%;
+            }
+        }
+    }
+    .slick-dots {
+        text-align: center;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0px;
+        li {
+            border: 2px solid #ECE4E4;
+            background-color: #ECE4E4;
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            margin: 5px;
+            border-radius: 50%;
+            button {
+                display: none;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .slick-active {
+            border: 0px solid #F7A951;
+            background: #F7A951;
+        }
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 0;
+    }
+}

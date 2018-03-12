@@ -1,0 +1,60 @@
+.navbar {
+    -webkit-box-shadow: 0px 1px 15px 1px rgba(86, 86, 86, 0.5);
+    -moz-box-shadow: 0px 1px 15px 1px rgba(86, 86, 86, 0.5);
+    box-shadow: 0px 1px 15px 1px rgba(86, 86, 86, 0.5);
+    background-color: #38224d;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 0px;
+    .iconnav {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        float: left;
+        align-self: center;
+        img {
+            max-width: 100%;
+        }
+    }
+    .navlinks {
+        margin: 0;
+        li {
+            display: inline-flex;
+            position: relative;
+            padding: 10px; // margin-top:2px;
+            a {
+                line-height: 16px;
+                color: #fff;
+                &:hover {
+                    text-decoration: none;
+                    color: $orange;
+                }
+            }
+            button:hover {
+                background-color: #fff;
+                color: $purple;
+            }
+        }
+    }
+    &.navbar-fixed {
+        top: 0;
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+    }
+}
+// 992px
+@media (min-width:$screen-iphone) and (max-width:$screen-sm - 1) {
+    .navbar {
+        .row {
+            margin: 0px;
+            width: 100%;
+            img {
+                height: 50px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}

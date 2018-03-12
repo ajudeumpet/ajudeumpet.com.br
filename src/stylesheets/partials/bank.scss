@@ -1,0 +1,120 @@
+.banco-section {
+    padding: 0px;
+    background-color: $light-orange;
+    padding-bottom: 40px;
+    position: relative;
+    .numbers-row {
+        margin-top: 40px;
+        h5 {
+            text-transform: uppercase;
+        }
+        .numbers {
+            text-shadow: 2px 3px #F78E1D;
+            font-family: 'Reef', 'Hind', sans-serif, Arial, Helvetica;
+            font-size: 4em;
+        }
+    }
+    button:hover {
+        background-color: #fff;
+        color: $purple;
+    }
+    .title-wrapper {
+        margin: 0 -15px;
+        .title {
+            font-size: 16pt;
+            text-align: center;
+            padding: 50px 0 15px;
+            &#principal {
+                background-color: $orange;
+            }
+        }
+    }
+    .icon {
+        margin-top: 20px;
+        position: relative;
+        img {
+            height: 80px;
+            display: block;
+            margin: 0 auto;
+            justify-content: center;
+        }
+    }
+    .bancos-wrapper {
+        width: 60%;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+        .banco-icon {
+            margin-top: 0px;
+            position: relative;
+            width: 120px;
+            &:hover {
+                cursor: pointer;
+            }
+            img {
+                width: 150px;
+                display: block;
+                margin: 0 auto;
+                align-items: center;
+            }
+        }
+    }
+    .banco-content-wrapper {
+        width: 50%;
+        padding: 0;
+        border: 2px solid #fff;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        margin-top: 20px;
+        height: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+        background-color: $orange;
+        h5 {
+            display: none;
+        }
+        #banco {
+            margin-bottom: 20px;
+        }
+        &.opened {
+            display: block;
+            padding: 20px;
+            height: 220px;
+            visibility: visible;
+            transition: all 0.5s ease;
+            h5 {
+                display: block;
+            }
+        }
+        &.bb {
+            &::before {
+                left: 24%;
+            }
+        }
+        &.caixa {
+            &::before {
+                left: 46%;
+            }
+        }
+        &.santander {
+            &::before {
+                left: 70%;
+            }
+        }
+        &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid #fff;
+            position: absolute;
+            left: 0;
+            top: -15px;
+            transition: left .25s ease;
+        }
+    }
+}

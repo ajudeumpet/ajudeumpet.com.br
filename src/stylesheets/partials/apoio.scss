@@ -1,0 +1,42 @@
+.apoio-section {
+    padding: 40px 0px;
+    align-items: center;
+    .icon {
+        margin-top: 20px;
+        position: relative;
+        img {
+            height: 100px;
+            display: block;
+            margin: 0 auto;
+            justify-content: center;
+        }
+    }
+    .title {
+        font-size: 16pt;
+        margin-bottom: 0px;
+        text-align: center;
+        color: #928B8B;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        color: #000;
+    }
+    .slick-apoio {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 200px;
+            transform: all .25s ease;
+            filter: grayscale(100%);
+        }
+        &:hover img {
+            cursor: pointer;
+            filter: grayscale(0%);
+        }
+    }
+}

@@ -1,0 +1,264 @@
+@import "_variables";
+@import "_mixins";
+@import "~slick-carousel/slick/slick";
+@import "~slick-carousel/slick/slick-theme";
+@import "~animate.css/animate.css";
+@import "partials/slider-pets";
+@import "partials/header";
+@import "partials/hero";
+@import "partials/idea";
+@import "partials/about";
+@import "partials/team";
+@import "partials/instruction";
+@import "partials/bank";
+@import "partials/apoio";
+@import "partials/contact";
+@import "partials/footer";
+@import "common";
+@import "contrast";
+* {
+    font-family: 'Hind', sans-serif;
+}
+
+section {
+    padding: 25px 0;
+}
+
+.acessibilidade-nav {
+    top: 61px !important;
+}
+
+.slick-arrow {
+    opacity: 0.3;
+}
+
+#acessibilidade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1059;
+    .bar {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        color: #FFF;
+        background-color: #38224d;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        float: right;
+        a {
+            cursor: pointer;
+            display: flex;
+            align-items: end;
+            padding: 5px 10px;
+            position: relative;
+            top: 0;
+        }
+        a:hover {
+            text-decoration: underline;
+            top: -1.5px;
+            path,
+            polygon,
+            rect {
+                fill: #F8991F !important;
+            }
+        }
+        .fonte {
+            display: flex;
+            align-items: center;
+            .adicionar {
+                display: flex;
+                align-items: center;
+                border-right: solid 1px #FFF;
+            }
+            .remover {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .contraste {
+            border-right: solid 1px #FFF;
+            align-items: center;
+        }
+    }
+}
+
+.swal2-header {
+    overflow: hidden;
+}
+
+.height100 {
+    height: 100%;
+    overflow: hidden;
+    padding: 0.75em !important;
+    .row {
+        height: 425px;
+        overflow: auto;
+    }
+}
+
+.social-icons-wrapper {
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+    a {
+        width: 24px;
+        height: 24px;
+        fill: #fff;
+        font-size: 24px;
+        transition: color .25s ease;
+        &:hover {
+            fill: $purple;
+        }
+    }
+}
+
+@media (min-width: $screen-iphone) and (max-width:$screen-xs - 1) {
+    .height100 {
+        .row {
+            height: 300px;
+            overflow: auto;
+        }
+    }
+    .banco-section {
+        .bancos-wrapper {
+            width: 90%;
+            justify-content: space-around;
+            .banco-icon {
+                width: 80px;
+            }
+        }
+        .banco-content-wrapper {
+            width: 100%;
+            &.bb {
+                &::before {
+                    left: 15%;
+                }
+            }
+            &.caixa {
+                &::before {
+                    left: 45%;
+                }
+            }
+            &.santander {
+                &::before {
+                    left: 75%;
+                }
+            }
+        }
+    }
+    #querofazerparte {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 10px 22px;
+    }
+    .about-section .iphone-wrapper .iphone {
+        width: 70%;
+    }
+    .btn#nav {
+        height: 35px !important;
+        font-size: 0.6rem !important;
+        padding: 8px 3px !important;
+    }
+    footer {
+        p {
+            font-size: 12px;
+        }
+        .social-icons-wrapper {
+            margin-top: 20px;
+        }
+    }
+    .slick-slider .slick-wrapper .btn-orange {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: $screen-iphone) and (max-width: $screen-sm - 1) {
+    #colaborador {
+        font-size: 15px;
+        padding: 10px 15px;
+        min-width: 270px !important;
+        margin: 0;
+    }
+    section:not(:first) {
+        padding: 40px 0px;
+    }
+    .btn {
+        &#maior {
+            max-width: 100%;
+            min-width: auto;
+        }
+    }
+}
+
+@media (min-width: $screen-iphone) and (max-width: $screen-md - 1) {
+    .apoio-section .slick-apoio img {
+        filter: none;
+    }
+    .social-icons-wrapper {
+        margin: 0 auto;
+    }
+    .contact-section {
+        .info-wrapper {
+            margin: 0px;
+            img.icon {
+                display: block;
+                margin: 0 auto;
+                width: 120px;
+                margin-bottom: 20px;
+            }
+            .description {
+                text-align: center;
+            }
+            h4.description {
+                font-size: 1.6rem;
+            }
+            h5.description {
+                font-size: 1.4rem;
+            }
+        }
+        .form-wrapper {
+            padding: 0px;
+            margin: 40px 0px 0px 0px;
+            .btn#contato {
+                float: none !important;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-lg - 1) {
+    .height100 {
+        .row {
+            height: 400px;
+            overflow: auto;
+        }
+    }
+}
+
+@media (min-width: $screen-xs) and (max-width: $screen-sm - 1) {
+    .height100 {
+        .row {
+            height: 400px;
+            overflow: auto;
+        }
+    }
+    .banco-content-wrapper {
+        &.bb {
+            &::before {
+                left: 11%!important;
+            }
+        }
+        &.caixa {
+            &::before {
+                left: 45%!important;
+            }
+        }
+        &.santander {
+            &::before {
+                left: 81%!important;
+            }
+        }
+    }
+}

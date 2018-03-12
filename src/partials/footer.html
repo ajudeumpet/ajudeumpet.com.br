@@ -1,0 +1,70 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p>
+          <a href="#">www.ajudeumpet.com.br</a> | Todos os direitos reservados&reg;</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 ml-auto mr-auto">
+        <div class="social-icons-wrapper d-flex d-md-none d-xl-none">
+          <a href="#">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-youtube-play"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="page-loader">
+</div>
+
+<script>
+  var pageLoader = document.querySelector("#page-loader");
+  document.addEventListener("DOMContentLoaded", function (event) {
+    fadeOut(pageLoader);
+  });
+  window.onload = function () {
+    new wow().init();
+  };
+
+  function fadeOut(el) {
+    el.style.opacity = 1;
+
+    (function fade() {
+      if ((el.style.opacity -= .1) < 0) {
+        el.style.display = "none";
+      } else {
+        requestAnimationFrame(fade);
+      }
+    })();
+  }
+
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('send', 'pageview')
+
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
